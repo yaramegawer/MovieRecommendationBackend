@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/**/*.js": {
-      "runtime": "nodejs16.x"
+      "runtime": "nodejs20.11.0"
     }
   },
   "routes": [
