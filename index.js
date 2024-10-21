@@ -13,11 +13,9 @@ const app = express();
 connectDB();
 app.use(cors());
 
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-  });
-  
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
+
 
 // Middleware to parse JSON requests
 app.use(express.json());
