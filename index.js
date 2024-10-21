@@ -27,7 +27,4 @@ app.use('/api/user', userRoutes); // Registration and login routes
 app.use('/api/movies', authMiddleware, movieRoutes); // Movie routes
 
 // Start the server on the port from environment or default to 5000
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
-});
+module.exports = app;
