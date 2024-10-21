@@ -1,9 +1,1 @@
-{
-  "version": 2,
-  "functions": {
-   
-  },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" }
-  ]
-}
+{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
