@@ -1,11 +1,15 @@
 {
   "version": 2,
   "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x" 
+    "api/app.py": {
+      "runtime": "vercel-python@3.9", 
+      "memory": 1024
     }
   },
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1.js" }
+    {
+      "src": "/(.*)",
+      "dest": "api/app.py"
+    }
   ]
 }
