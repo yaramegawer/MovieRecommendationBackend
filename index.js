@@ -5,6 +5,7 @@ const userRoutes = require('./routes/userRouter');
 const movieRoutes = require('./routes/movieRoutes');
 const authMiddleware = require('./controllers/authMiddleware');
 const cors=require('cors');
+require('dotenv').config(); 
 // Initialize app and load environment variables
 dotenv.config();
 const app = express();
