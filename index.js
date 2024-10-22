@@ -8,7 +8,7 @@ const cors=require('cors');
 // Initialize app and load environment variables
 dotenv.config();
 const app = express();
-
+const port=5000 ||process.env.PORT ;
 // Connect to the database
 connectDB();
 app.use(cors());
@@ -27,4 +27,4 @@ app.use('/api/user', userRoutes); // Registration and login routes
 app.use('/api/movies', authMiddleware, movieRoutes); // Movie routes
 
 // Start the server on the port from environment or default to 5000
-module.exports = app;
+app.listen(5000,()=>console.log('app listening on port ',port));
