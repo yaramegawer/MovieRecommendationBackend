@@ -4,7 +4,7 @@ const { urlencoded } = require('body-parser');
 require('dotenv').config(); // Load environment variables
 
 // TMDb API URL and Key
-const TMDB_API_KEY = process.env.TMDB_API_KEY;
+const TMDB_API_KEY = 'a7ee61998062d3404073d2279b6d9a9a';
 const TMDB_API_BASE_URL = 'https://api.themoviedb.org/3';
 
 const getRecommendation = async (req, res) => {
